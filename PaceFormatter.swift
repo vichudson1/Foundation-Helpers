@@ -15,7 +15,7 @@ struct PaceFormatter {
 	/// - Parameter pace: The walking pace value.
 	/// - Returns: string representing the walking pace in the form `19'23"`.
 	/// - Note: Depends on the `timeUnits` extension on `TimeInterval`.
-	static func string(from pace: WalkingPace) -> String {
+	func string(from pace: WalkingPace) -> String {
 		let units = pace.timeUnits
 		return "\(units.minutes)'\(units.seconds)\""
 	}
