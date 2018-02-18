@@ -1,5 +1,5 @@
 //
-//  Flipable-Protocol.swift
+//  Bool - Flip.swift
 //  Health Up Display
 //
 //  Created by Victor Hudson on 4/6/16.

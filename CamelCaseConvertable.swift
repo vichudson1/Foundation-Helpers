@@ -19,7 +19,7 @@ extension CamelCaseConvertable where Self: RawRepresentable, Self.RawValue: Expr
 		return string.replacingOccurrences(of: "([a-z])([A-Z])",
 		                                   with: "$1 $2",
 		                                   options: NSString.CompareOptions.regularExpression,
-		                                   range: NSMakeRange(0, string.length))
+		                                   range: NSMakeRange(0, string.length)).capitalized
 		
 	}
 }
