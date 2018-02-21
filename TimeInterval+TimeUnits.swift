@@ -15,3 +15,47 @@ extension TimeInterval {
 		return (interval / 3600, (interval % 3600) / 60, (interval % 3600) % 60)
 	}
 }
+
+
+extension TimeInterval {
+	var second: TimeInterval {
+		return self.seconds
+	}
+	
+	var seconds: TimeInterval {
+		return self
+	}
+	
+	var minute: TimeInterval {
+		return self.minutes
+	}
+	
+	var minutes: TimeInterval {
+		let secondsInAMinute = 60 as TimeInterval
+		return self * secondsInAMinute
+	}
+	
+	var day: TimeInterval {
+		return self.days
+	}
+	
+	var days: TimeInterval {
+		let secondsInADay = 86_400 as TimeInterval
+		return self * secondsInADay
+	}
+	
+	var fromNow: Date {
+		let timeInterval = self
+		return Date().addingTimeInterval(timeInterval)
+	}
+	
+	func from(_ date: Date) -> Date {
+		let timeInterval = self
+		return date.addingTimeInterval(timeInterval)
+	}
+	
+	var ago: Date {
+		let timeInterval = self
+		return Date().addingTimeInterval(-timeInterval)
+	}
+}
