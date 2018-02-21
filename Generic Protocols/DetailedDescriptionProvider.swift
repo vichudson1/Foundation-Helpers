@@ -4,10 +4,10 @@
 
 import Foundation
 
+
+/// Types conforming to this protocol provide a `detailedDescription` string property.
 protocol DetailedDescriptionProvider {
 	
-}
-
-extension DetailedDescriptionProvider {
-	
+	/// A string describing the conforming type in detail.
+	var detailedDescription: String { get }
 }
